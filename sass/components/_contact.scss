@@ -1,0 +1,33 @@
+.header__contacts { display: none;}
+
+.mobile__contacts {display: flex;
+
+	@media (min-width: 481px) { display: none;}
+}
+
+
+//.header__contacts li:last-child { margin-right: 0px;}
+
+//.header__email { fill: $greey; margin-right: 30px;
+
+//	&:hover, &:focus { fill: $blue-logo;}
+//}
+
+//.header__telephone { fill: $greey;
+
+//	&:hover, &:focus {fill: $blue-logo;}
+//}
+
+//.header__icon { content: ''; width: 16px; height: 12px; margin-right: 10px;}
+  
+//.header__pochta { font-weight: 500; font-style: normal; font-size: 14px; color: $greey; cursor: pointer; transform: opacity 250ms $cubik;
+
+//	&:hover,&:focus { text-decoration: underline $blue-logo; color: $blue-logo;}
+//}
+
+//.header__smartphone { color: $greey; font-weight: 500; font-style: normal; font-size: 14px; line-height: 16px; transform: color 250ms $cubik;
+
+//	&:hover { text-decoration: underline $blue-logo; color: $blue-logo;}
+//}
+	
+//.header__icon-smartphone { content: ''; width: 10px; height: 12px; margin-right: 10px;}

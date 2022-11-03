@@ -1,0 +1,110 @@
+.our__team {
+	width: 100%;
+	background-color: $background-komanda;
+}
+
+.team__heading { 
+	color: $black-text;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 28px;
+	line-height: 33px;
+	letter-spacing: 0.03em;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 30px;
+
+	@media screen and (min-width: 1200px) {
+		font-size: 36px;
+		line-height: 42.19px;
+		padding-bottom: 50px;
+	}
+}
+
+.team__card { box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),  0px 2px 1px rgba(0, 0, 0, 0.2); border-radius: 0px 0px 4px 4px; width: 450px;}
+
+.team__list {
+	&:last-child {padding-bottom: 60px;}
+
+	@media screen and (min-width:768px) {
+		display: flex;
+		flex-wrap: wrap;
+		flex-basis: calc((100% - 60px) /2);
+	}
+
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		&:not(:first-child) { margin-left: 30px;}
+	}
+}
+
+.team__card {margin-bottom: 30px;
+	
+	&:not(:first-child) {margin-bottom: 0px;}
+}
+
+//марджини передивитись в карткі 
+
+.team__images {
+	width: 450px;
+	height: 460px;
+
+	@media screen and (min-width: 768px) {
+		width: 354px;
+		height: 374px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 270px;
+		height: 260px;
+	}
+}
+
+.team__name { color: $black-text; font-weight: 500; font-style: normal; font-size: 16px; line-height: 19px; letter-spacing: 00.03em; padding-top: 30px; text-align: center;}
+
+.team__position { color: $greey; font-weight: 400; font-style: normal; font-size: 16px; line-height: 19px; letter-spacing: 0.03em; margin-top: 10px; padding-bottom: 30px; text-align: center;}
+
+.card__content { background-color: $white-text;}
+
+.set__network { display: flex; justify-content: center; text-align: center; padding-bottom: 28.52px;}
+
+.network__item { fill: $baskground-social-link;}
+
+.network__element { display: flex; align-items: center; justify-content: center; width: 44px; height: 41.82px; cursor: pointer; transform: background-color 250ms $cubik, border-radius 250ms $cubik;
+
+	&:hover,
+	&:focus { background: $blue-logo; border-radius: 50%; fill: $white-text;}
+}
+
+.network__name { width: 20px; height: 19.01px;}
+
+
+//.our__team { width: 100%; background-color: $background-komanda;}
+  
+//.team__heading { color: $black-text; font-weight: 700; font-style: normal; font-size: 36px; text-align: center; padding-top: 94px; padding-bottom: 50px;}
+  
+//.team__set { display: flex; flex-wrap: wrap; flex-basis: calc(100% / 4 - 30px); justify-content: space-between; padding-bottom: 94px;}
+  
+//.team__card { box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),  0px 2px 1px rgba(0, 0, 0, 0.2); border-radius: 0px 0px 4px 4px;width: 270px;}
+
+//.team__list:not(:first-child) { margin-left: 30px;}
+  
+//.team__images { width: 270px; height: 260px;}
+  
+//.team__name { color: $black-text; font-weight: 500; font-style: normal; font-size: 16px; line-height: 19px; padding-top: 30px; text-align: center;}
+  
+//.team__position { color: $greey; font-weight: 400; font-style: normal; font-size: 16px; line-height: 19px; letter-spacing: 00.03em; margin-top: 10px; padding-bottom: 30px; text-align: center;}
+  
+//.card__content { background-color: $white-text;}
+  
+//.set__network { display: flex; justify-content: center; text-align: center; padding-bottom: 28.52px;}
+  
+//.network__item { fill: var(--baskground-social-link);}
+  
+//.network__element { display: flex; align-items: center; justify-content: center; width: 44px; height: 41.82px; cursor: pointer; transform: background-color 250ms $cubik, border-radius 250ms $cubik;
+
+//	&:hover,
+//	&:focus { background: $blue-logo; border-radius: 50%; fill: $white-text;}
+//}
+  
+//.network__name { width: 20px; height: 19.01px;}
