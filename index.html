@@ -19,16 +19,6 @@
             <a class="header__logotip" href="./index.html"
               ><span class="header__logo">Web</span>Studio</a
             >
-            <svg class="header__menu">
-              <use
-                href="./images/sprite.svg#icon-menu_40px"
-                class="menu__icon"
-              ></use>
-              <use
-                href="./images/sprite.svg#icon-close_40px"
-                class="menu__close"
-              ></use>
-            </svg>
             <ul class="header__list">
               <li class="header__li">
                 <a class="header__link" href="./index.html">Студия</a>
@@ -42,14 +32,28 @@
                 <a href="#contact" class="header__link-stydia">Контакты</a>
               </li>
             </ul>
+            <!-- кнопка открытия мобильного меню -->
+            <button
+              type="button"
+              class="menu__button js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg class="open__icon">
+                <use
+                  href="./images/sprite.svg#icon-menu_40px"
+                  class="menu__icon"
+                ></use>
+              </svg>
+            </button>
             <ul class="header__contacts">
               <li class="header__email">
                 <svg class="header__icon">
                   <use href="./images/sprite.svg#icon-envelope-hover"></use>
                 </svg>
                 <a class="header__pochta" href="mailto:info@devstudio.com"
-                  >info@devstudio.com
-                </a>
+                  >info@devstudio.com</a
+                >
               </li>
               <li class="header__telephone">
                 <svg class="header__icon-smartphone">
@@ -60,16 +64,44 @@
                 >
               </li>
             </ul>
-            <ul class="mobile__contacts">
-              <li class="mobile__number">+38 096 111 11 11</li>
-              <li class="mobile__number">info@devstudio.com</li>
-            </ul>
-            <ul class="header__social">
-              <li class="social__link">Instagram</li>
-              <li class="social__link">Twitter</li>
-              <li class="social__link">Facebook</li>
-              <li class="social__link">LinkedIn</li>
-            </ul>
+            <!--"mobile__menu">-->
+            <div class="menu__container js-menu-container" id="mobile-menu">
+              <button type="button" class="menu__button-close js-close-menu">
+                <svg class="close__icon">
+                  <use
+                    href="./images/sprite.svg#icon-close_40px"
+                    class="menu__close"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="mobile__linke">
+                <li class="mobile__items">
+                  <a href="./index.html" class="mobile__stydia">Студия</a>
+                </li>
+                <li class="mobile__items">
+                  <a href="./portfolio.html" class="mobile__stydia"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile__items">
+                  <a href="#contact" class="mobile__stydia">Контакты</a>
+                </li>
+              </ul>
+              <ul class="mobile__contacts">
+                <li class="mobile__number">+38 096 111 11 11</li>
+                <li class="mobile__email">info@devstudio.com</li>
+              </ul>
+              <ul class="mobile__social">
+                <li class="social__link">
+                  Instagram<span class="line">|</span>
+                </li>
+                <li class="social__link">Twitter<span class="line">|</span></li>
+                <li class="social__link">
+                  Facebook<span class="line">|</span>
+                </li>
+                <li class="social__link">LinkedIn</li>
+              </ul>
+            </div>
           </nav>
         </div>
       </section>
@@ -83,11 +115,11 @@
               Заказать услугу
             </button>
           </a>
-          <span class="icon__fon">
+          <!--<span class="icon__fon">
             <svg class="icon__fon-img">
               <use href="./images/img.svg"></use>
             </svg>
-          </span>
+          </span>-->
         </div>
       </section>
       <div class="main__backdrop is-hidden" data-modal>
@@ -230,15 +262,35 @@
         <h2 class="foto__heading">Чем мы занимаемся</h2>
         <ul class="foto__list">
           <li class="foto__item">
-            <img src="images/box1.jpg" alt="комп" />
+            <img
+              srcset="
+                images/desktop_img_pc1x.jpg 1x,
+                images/desktop_img_pc@2x    2x
+              "
+              src="images/desktop_img_pc1x.jpg"
+              alt="Десктоп"
+              width="370"
+            />
             <p class="foto__text">Десктопные приложения</p>
           </li>
           <li class="foto__item">
-            <img src="images/box2.jpg" alt="телефон" />
+            <img
+              srcset="images/mobile_img_pc1x.jpg 1x, images/mobile_img_pc@2x 2x"
+              src="images/mobile_img_pc1x.jpg"
+              alt="телефон"
+            />
             <p class="foto__text">Мобильные приложения</p>
           </li>
           <li class="foto__item">
-            <img src="images/box3.jpg" alt="планшет" />
+            <img
+              srcset="
+                images/desiner_img_pc1x.jpg 1x,
+                images/desiner_img_pc@2x    2x
+              "
+              src="images/desiner_img_pc1x.jpg"
+              alt="планшет"
+              width="370"
+            />
             <p class="foto__text">Дизайнерские решения</p>
           </li>
         </ul>
@@ -252,11 +304,34 @@
             <ul class="team__list">
               <article class="team__card">
                 <div class="card__thumb">
-                  <img
-                    class="team__images"
-                    src="images/img1.jpg"
-                    alt="Дизайнер"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/igordemyanenko_img_pc1x.jpg  1x,
+                        images/igordemyanenko_img_pc@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        images/igordemyanenko_img_tab1x.jpg  1x,
+                        images/igordemyanenko_img_tab@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        images/igordemyanenko_mob1x.jpg 1x,
+                        images/igordemyanenko_pc@2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      class="team__images"
+                      src="images/img1.jpg"
+                      alt="Дизайнер"
+                    />
+                  </picture>
                 </div>
                 <div class="card__content">
                   <h3 class="team__name">Игорь Демьяненко</h3>
@@ -297,11 +372,34 @@
             <ul class="team__list">
               <article class="team__card">
                 <div class="card__thumb">
-                  <img
-                    class="team__images"
-                    src="images/img2.jpg"
-                    alt="Разработчик"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/olgarepina_pc1x.jpg  1x,
+                        images/olgarepina_pc@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        images/olgarepina_tab1x.jpg  1x,
+                        images/olgarepina_tab@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        images/olgarepina_mob1x.jpg  1x,
+                        images/olgarepina_mob@2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      class="team__images"
+                      src="images/img2.jpg"
+                      alt="Разработчик"
+                    />
+                  </picture>
                 </div>
                 <div class="card__content">
                   <h3 class="team__name">Ольга Репина</h3>
@@ -342,11 +440,34 @@
             <ul class="team__list">
               <article class="team__card">
                 <div class="card__thumb">
-                  <img
-                    class="team__images"
-                    src="images/img3.jpg"
-                    alt="Маркетолог"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/mukolatarasov_pc1x.jpg  1x,
+                        images/mukolatarasov_pc@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        images/mukolatarasov_tab1x.jpg  1x,
+                        images/mukolatarasov_tab@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        images/mukolatarasov_mob1x.jpg  1x,
+                        images/mukolatarasov_mob@2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      class="team__images"
+                      src="images/img3.jpg"
+                      alt="Маркетолог"
+                    />
+                  </picture>
                 </div>
                 <div class="card__content">
                   <h3 class="team__name">Николай Тарасов</h3>
@@ -387,11 +508,34 @@
             <ul class="team__list">
               <article class="team__card">
                 <div class="card__thumb">
-                  <img
-                    class="team__images"
-                    src="images/img4.jpg"
-                    alt="Дизайнер"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/muhailoermak_pc1x.jpg  1x,
+                        images/muhailoermak_pc@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        images/muhailoermak_tab1x.jpg  1x,
+                        images/muhailoermak_tab@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        images/muhailoermak_mob1x.jpg  1x,
+                        images/muhailoermak_mob@2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      class="team__images"
+                      src="images/img4.jpg"
+                      alt="Дизайнер"
+                    />
+                  </picture>
                 </div>
                 <div class="card__content">
                   <h3 class="team__name">Михаил Ермаков</h3>
@@ -487,7 +631,7 @@
     <footer id="contact">
       <section>
         <div class="container flex__container">
-          <section>
+          <section class="footer__section">
             <a class="footer__logo" href="./index.html"
               ><span class="header__logo">Web</span>Studio</a
             >
@@ -501,7 +645,7 @@
               >
             </address>
           </section>
-          <section>
+          <section class="footer__section">
             <div class="footer__connect">
               <h2 class="footer__heading">присоединяйтесь</h2>
               <ul class="footer__list">
@@ -536,7 +680,7 @@
               </ul>
             </div>
           </section>
-          <section class="footer__form">
+          <section class="footer__form footer__section">
             <form>
               <h2 class="form__heading">Подпишитесь на рассылку</h2>
               <div class="form__div">
@@ -567,5 +711,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
