@@ -1,51 +1,136 @@
-//.visually__hidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px;}
-
-.section__block,
-.button__list { display: flex;}
-
-//.section__block { padding-top: 94px; padding-bottom: 94px;}
-
-.button__list {justify-content: center;
-	flex-wrap: wrap;
+.portfolio__list {
+	@media screen and (min-width: 768px) {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-basis: calc((100% - 30px) / 2);
+	}
 }
 
-.button__items { margin-right: 8px;}
+.portfolio__items {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 450px;
+	background-color: $white-text;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	cursor: pointer;
+	
+	&:last-child {
+		margin-bottom: 60px;
+	}
 
-.button__name { font-weight: 500; font-style: normal; font-size: 16px; line-height: 26px; letter-spacing: 3%; text-align: center; border-radius: 4px; height: 38px; color: $black-text;
+	@media  screen and (min-width: 768px) {
+		width: 354px;
+	}
 
-	&:hover,
-	&:focus { color: $white-text; background-color: $blue-logo; box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); cursor: pointer;}
+	@media  screen and (min-width: 1200px) {
+		width: 370px;
+	}
 }
 
-.button__vse { width: 73px;}
+.portfolio__slot {
+	display: flex;
+	flex-direction: column;
+}
+
+.slot__thumb {
+	position: relative;
+	overflow: hidden;
+}
+
+.cart__overlay {
+	position: absolute;
+	width: 100%;
+	height: 294px;
+	top: 0;
+	right: 0;
+	background-color: $hover-befor-folio;
+	transform: translateY(100%);
+	transition: transform 250ms $cubik;
+}
+
+.portfolio__slot:hover .cart__overlay { 
+	transform: translateY(0);
+}
+
+.slot__text {
+	position: absolute;
+	display: flex;
+	top: 63px;
+	left: 24px;
+	right: 24px;
+	bottom: 63px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 0.03em;
+	text-align: left;
+	color: $white-text;
+}
+
+.slot__description {
+	height: 146px;
+	padding-top: 20px;
+	border-right: 1px solid $border-cart;
+	border-bottom: 1px solid $border-cart;
+	border-left: 1px solid $border-cart;
+	box-sizing: border-box;
+}
+
+.portfolio__list > .slot__description {
+	flex-grow: 1;
+}
+
+.slot__heading {
+	font-style: normal;
+	font-weight: 700; 
+	font-size: 18px; 
+	line-height: 36px; 
+	letter-spacing: 0.06em; 
+	color: $black-text;
+	margin-bottom: 4px; 
+	padding-left: 24px;
+}
+
+.slot__name {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 30px; 
+	letter-spacing: 0.03em; 
+	color: $greey;
+	padding-left: 24px;
+	padding-bottom: 20px;
+}
+
+img {
+	width: 450px;
+	height: 294px;
+
+	@media screen and (min-width: 768px) {
+		width: 354px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 370px;
+	}
+}
+
+
+//.slot__description {
+//
+//	flex-grow: 1;
+//
+//}
   
-.button__web { width: 128px;}
+
   
-.button__aplication { width: 145px;}
-  
-.button__dezine { width: 103px;}
 
-.button__market { width: 130px;}
 
-//.portfolio__list { flex-wrap: wrap; flex-basis: calc(100% / 3 - 30px); justify-content: space-between;}
-
-images { width: 450px; height: 294px;}
-
-.portfolio__items { position: relative; width: 450px; background-color: $white-text; margin-bottom: 30px; margin-right: 0px; cursor: pointer;}
-
-.slot__thumb { position: relative; overflow: hidden;}
-
-.cart__overlay { position: absolute; width: 100%; height: 294px; top: 0; right: 0; background-color: $hover-befor-folio; transform: translateY(100%); transition: transform 250ms $cubik;}
-
-.portfolio__slot:hover .cart__overlay { transform: translateY(0);}
-
-.slot__text { font-size: 18px; font-style: normal; font-weight: 400; line-height: 28px; letter-spacing: 0.03em; text-align: left; color: $white-text; position: absolute; top: 63px; left: 24px; right: 24px; bottom: 63px; display: flex;}
-
-.slot__description { border-right: 1px solid $border-cart; border-bottom: 1px solid $border-cart; border-left: 1px solid $border-cart; box-sizing: border-box}
-  
-.slot__heading { color: $black-text; font-weight: 700; font-style: normal; font-size: 18px; line-height: 36px; letter-spacing: 0.06em; margin-bottom: 4px; padding-left: 24px;}
-  
-.slot__name { color: $greey; font-weight: 400; font-style: normal; font-size: 16px; line-height: 30px; letter-spacing: 0.03em; padding-left: 24px; padding-bottom: 20px;}
+//================================
 
 //.visually__hidden { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px;}
   

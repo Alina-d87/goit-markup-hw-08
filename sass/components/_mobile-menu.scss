@@ -1,0 +1,147 @@
+.menu__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	min-height: 40px;
+
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	outline: none;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
+.menu__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 480px;
+	height: 796px;
+	z-index: 9999;
+	background: var(--primary-text-color-light);
+	transform: translateX(-100%);
+
+	background-color: $white-text;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
+.menu__container.is-open {
+	transform: translateX(0);
+}
+
+.menu__button-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//margin: 0;
+	//padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	transform: fill 250ms $cubik;
+
+	&:hover,
+	&:focus {
+		fill: $blue-logo;
+	}
+}
+
+.mobile__linke {
+	margin-top: 48px;
+	margin-left: 40px;
+}
+
+.mobile__stydia {
+	font-family: $font-roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 47px;
+	letter-spacing: 0.02em;
+	color: $black-text;
+	transform: color 250ms $cubik;
+
+	&:hover,
+	&:focus {
+		color: $blue-logo;
+	}
+}
+
+.mobile__items {
+	padding-bottom: 35px;
+
+	&:last-child { 
+		padding-bottom: 0px;
+	}
+}
+
+.mobile__contacts{
+	margin-left: 40px;
+	margin-top: 300px;
+} 
+
+.mobile__number{
+	font-family: $font-roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 34px;
+	line-height: 40px;
+	letter-spacing: 0.02em;
+	padding-bottom: 32px;
+	color: $blue-logo;
+}
+
+.mobile__email {
+	font-family: $font-roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: 0.02em;
+	color: $greey;
+}
+
+.mobile__social {
+	display: flex;
+	margin-top: 64px;
+	margin-bottom: 48px;
+	margin-left: 40px;
+} 
+
+
+.social__link {
+	font-family: $font-roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	color: $blue-logo;
+}
+
+.line {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 1px;
+	color: $border-form-op02;
+}
+
+//// .js-open-menu{} .open__icon{} .menu__icon{}
+//.js-close-menu{} .close__icon{} .menu__close{}
+
+//ховер зробитии синім!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -13,10 +13,12 @@ body {
 	}
 	
 	@media screen and (min-width: 768px) {
-		width: 768px;}
+		width: 768px;
+	}
 	
 	@media screen and (min-width: 1200px) {
-		width: 1200px;}
+		width: 1200px;
+	}
 }
 
 img {
@@ -26,3 +28,15 @@ img {
 }
 
 a {text-decoration: none;}
+
+//.container--mobile {
+//	position: relative;
+//	width: 100%;
+//	padding: 48px 40px;
+//	margin-left: auto;
+//	margin-right: auto;
+
+//	display: flex;
+//	flex-direction: column;
+//	height: 100%;
+//}

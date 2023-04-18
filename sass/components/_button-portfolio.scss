@@ -1,0 +1,77 @@
+.visually__hidden { 
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.section__block,
+.button__list { 
+	display: flex;
+}
+
+.button__list {
+	flex-wrap: wrap;
+	margin-top: 60px;
+	margin-bottom: 40px;
+
+	@media screen and (min-width: 768px) {
+		justify-content: center;
+	}
+	
+}
+
+.button__items { 
+	margin-right: 8px;
+	margin-bottom: 15px;
+
+	&:nth-last-child(-n+2) {
+		margin-bottom: 0px;
+	}
+}
+
+.button__name { 
+	font-weight: 500;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 3%;
+	text-align: center;
+	border-radius: 4px;
+	height: 38px;
+	color: $black-text;
+
+	&:hover,
+	&:focus { 
+		color: $white-text;
+		background-color: $blue-logo;
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+		cursor: pointer;
+	}
+}
+
+.button__vse { 
+	width: 73px;
+	height: 38px;
+}
+  
+.button__web { 
+	width: 128px;
+	height: 38px;
+}
+  
+.button__aplication {
+	width: 145px;
+	height: 38px;
+}
+  
+.button__dezine {
+	width: 103px;
+	height: 38px;
+}
+
+.button__market {
+	width: 130px;
+	height: 38px;
+}
